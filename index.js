@@ -56,21 +56,31 @@ let questions = [
 
 function renderCurrentQuestionAndAnswers(index)
 {
+  console.log(currentQuestion);
+   $(".questionNumber").html(currentQuestion+1);
   //We're clearing the main element 
   $("main").html("");
   //Render the question on the main element
  $("main").append(`
-   <h3>${questions[index].question}</h3>`);
+ 	<section class="questionScreen">
+		<form class="questionForm">
+			<fieldset class="radio">
+		<legend>${questions[index].question}</legend>`);
    //We created an <ul> to hold our answers A to D
  $("main").append("<ul>");
    //Then we created <li>'s for each answer A to D'
 for (let i = 0; i < questions[index].answers.length; i++)
  {
    $("main").append(`
-   <li><input type="radio" name="answers" value="${i}">${questions[index].answers[i]}</li>`);
+   <label>
+			<input type="radio" name="answers" value="${i}" required>${questions[index].answers[i]}
+	 </label><br>`);
  }
  //Then we close <ul>
-  $("main").append("</ul>");
+  $("main").append(`</section>
+		</form>
+		</fieldset>
+    <section>`);
   
 }
 
@@ -81,12 +91,12 @@ function startQuiz()
   $(".start").on("click", function(){
     renderCurrentQuestionAndAnswers(currentQuestion);
     currentQuestion++;
+    $('.start').hide();
     $(".start").prop('disabled', true);
   });
-
-
+     
 }
-
+   
 function submitQuiz()
 {
     $(".submit").on("click", function(){
@@ -100,11 +110,13 @@ function submitQuiz()
      {
        score++;
        $("#result").html("<br>Correct answer!");
+       $(".score").html(score);
      }
      else
      {
         $("#result").html("<br>Wrong answer!");
      }
+   
   });
 }
 
@@ -120,6 +132,7 @@ function nextQuestion()
          $(".continue").hide();
          $("main").hide();
         //alert("No more questions \n score is " + score);
+      
         $("#result").html(`<br><h3>Thanks for taking the Quiz</h3><h3><font color="blue">You score: ${score}</h3>
          <button class="restart">Restart Quiz Question</button>
         `);
