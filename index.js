@@ -99,7 +99,6 @@ function startQuiz()
 function submitQuiz()
 {   
     $(".submit").on("click", function(){
-     $('.continue').show();
      let currentQuestionIndex = currentQuestion - 1; 
      let correctAnswerIndex = questions[currentQuestion - 1].correctAnswer;
      let selectedAnswer = $("input[name=answers]:checked").val();
@@ -108,11 +107,13 @@ function submitQuiz()
        alert("Please select an option");
        return;
      }
+	$('.continue').show();
      if(correctAnswerIndex == selectedAnswer) 
      {
        score++;
        $("#result").html("<br>Correct answer!");
        $(".score").html(score);
+       $(".submit").prop('disabled',true);
      }
      else
      { 
@@ -121,16 +122,14 @@ function submitQuiz()
         $("#result").html("<br>Wrong answer! Correct answer is: "+ correctanswer);
        
      }
-     
-
-   $(".nextQuestion").hide();
-  });
+       });
 }
 
 function nextQuestion()
 {
- $(".nextQuestion").hide(); 
-    $(".continue").on("click", function(){
+	$(".continue").on("click", function(){
+    $(".submit").prop('disabled',false);
+      $('.continue').hide();
            let selectedAnswer = $("input[name=answers]:checked").val();
      if(!selectedAnswer)
    {
