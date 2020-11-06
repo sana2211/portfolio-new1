@@ -83,42 +83,60 @@ for (let i = 0; i < questions[index].answers.length; i++)
 function startQuiz()
 {
   console.log("currentQuestion: "+ currentQuestion);
+  $('.submit').hide();
+  $('.continue').hide();
   //we have a class name .start and with the "on" we're invoking an event function with click event handler
   $(".start").on("click", function(){
     renderCurrentQuestionAndAnswers(currentQuestion);
     currentQuestion++;
     $('.start').hide();
     $(".start").prop('disabled', true);
+   $('.submit').show();
   });
      
 }
    
 function submitQuiz()
-{
+{   
     $(".submit").on("click", function(){
+     $('.continue').show();
+     let currentQuestionIndex = currentQuestion - 1; 
+     let correctAnswerIndex = questions[currentQuestion - 1].correctAnswer;
      let selectedAnswer = $("input[name=answers]:checked").val();
      if(!selectedAnswer)
      {
        alert("Please select an option");
        return;
      }
-     if(questions[currentQuestion - 1].correctAnswer == selectedAnswer) 
+     if(correctAnswerIndex == selectedAnswer) 
      {
        score++;
        $("#result").html("<br>Correct answer!");
        $(".score").html(score);
      }
      else
-     {
-        $("#result").html("<br>Wrong answer!");
+     { 
+       
+       let correctanswer= questions[currentQuestionIndex].answers[correctAnswerIndex];
+        $("#result").html("<br>Wrong answer! Correct answer is: "+ correctanswer);
+       
      }
-   
+     
+
+   $(".nextQuestion").hide();
   });
 }
 
 function nextQuestion()
 {
+ $(".nextQuestion").hide(); 
     $(".continue").on("click", function(){
+           let selectedAnswer = $("input[name=answers]:checked").val();
+     if(!selectedAnswer)
+   {
+alert("Please select an answer")
+return;
+}
       $("#result").html("");
       if(currentQuestion == questions.length)
       {
@@ -127,6 +145,8 @@ function nextQuestion()
          $(".submit").hide();
          $(".continue").hide();
          $("main").hide();
+            $(".nextQuestion").hide();
+
         //alert("No more questions \n score is " + score);
       
         $("#result").html(`<br><h3>Thanks for taking the Quiz</h3><h3><font color="blue">You score: ${score}</h3>
