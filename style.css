@@ -2,7 +2,7 @@
 
 
 html{
-   background: url('https://www.mid-americasportsconstruction.com/blog/wp-content/uploads/2018/03/soccer-field.jpg');
+      background: url('https://www.mid-americasportsconstruction.com/blog/wp-content/uploads/2018/03/soccer-field.jpg');
    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -25,7 +25,7 @@ body{
     font-family: arial;
     font-size: 23px;
    margin-left: 5px;
-   color: black;
+   color:black;
    background-size: 100%;
    padding: 0px;
   margin: 0px;
@@ -48,6 +48,7 @@ header{
   float:left;
     font-size: 1em;
     font-weight: 800;
+   padding-top: 60px;
        margin-left: 70px;
     font-family: 'Montserrat', sans-serif;
     
