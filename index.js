@@ -91,7 +91,8 @@ function startQuiz()
     currentQuestion++;
     $('.start').hide();
     $(".start").prop('disabled', true);
-   $('.submit').show();
+     $('.submit').show();
+      
   });
      
 }
@@ -99,7 +100,7 @@ function startQuiz()
 function submitQuiz()
 {   
     $(".submit").on("click", function(){
-     let currentQuestionIndex = currentQuestion - 1; 
+     let currentQuestionIndex = currentQuestion - 1; //Because arrays start from 0
      let correctAnswerIndex = questions[currentQuestion - 1].correctAnswer;
      let selectedAnswer = $("input[name=answers]:checked").val();
      if(!selectedAnswer)
@@ -107,7 +108,7 @@ function submitQuiz()
        alert("Please select an option");
        return;
      }
-	$('.continue').show();
+     $('.continue').show();
      if(correctAnswerIndex == selectedAnswer) 
      {
        score++;
@@ -118,16 +119,17 @@ function submitQuiz()
      else
      { 
        
-       let correctanswer= questions[currentQuestionIndex].answers[correctAnswerIndex];
+      let correctanswer= questions[currentQuestionIndex].answers[correctAnswerIndex];
         $("#result").html("<br>Wrong answer! Correct answer is: "+ correctanswer);
        
      }
-       });
+    
+  });
 }
 
 function nextQuestion()
 {
-	$(".continue").on("click", function(){
+  $(".continue").on("click", function(){
     $(".submit").prop('disabled',false);
       $('.continue').hide();
            let selectedAnswer = $("input[name=answers]:checked").val();
@@ -162,14 +164,7 @@ return;
 function restartQuiz()
 {
   $(".restart").on("click", function(){
-    $(".start").prop('disabled', false);
-    $(".restart").hide();
-    $(".start").show();
-    $(".submit").show();
-    $(".continue").show();
-    $("main").show();
-    $("#result").html("");
-    init();
+    location.reload();
   })
  
 }
