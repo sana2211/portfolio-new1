@@ -1,119 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
-
-html{
-      background: url('https://www.mid-americasportsconstruction.com/blog/wp-content/uploads/2018/03/soccer-field.jpg');
-   background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-h3
-{
-  border: 2px solid #d5d5d5; 
-  width: 500px; 
-  text-align: center; 
-  padding: 5px;
-  margin: 5px;
-  font-size: larger;
-}
-body{
-    font-family: arial;
-    font-size: 23px;
-   margin-left: 5px;
-   color: black;
-   background-size: 100%;
-   padding: 0px;
-  margin: 0px;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans",
+  sans-serif; 
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+}
 
-header{
-    background: #1f88f4;
-    color: #ffffff;
-    padding: 20px ;
-    font-size: 20px;
-    text-align: center;
-  font-family: 'Montserrat', sans-serif;
- 
+nav,
+footer {
+  padding: 1% 0;
+  background-color: #aaa;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 
 
-.questions{
-  float:left;
-    font-size: 1em;
-    font-weight: 800;
-   padding-top: 60px;
-       margin-left: 70px;
-    font-family: 'Montserrat', sans-serif;
-    
+header {
+  padding: 12% 0;
 }
 
-button {
-    font-size: 16px;
-    background: #1f88f4;
-    padding: 10px;
-    border-radius: 5px 0 0 5px;
-    text-align: center;
-    color: #ffffff;
-    margin-left: 20px;
-    margin-right: 30px;
-    margin-top: 50px;
-    display:inline;
+section {
+  min-height: 200px;
+  padding: 6% 0;
+  background-color: #bbb;
 }
 
-
-li
-{
-  list-style: none;
-}
-
-main
-{
-  margin-left: 50px;
-}
-
-.buttonContainer
-{
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-}
-
-@media only screen and (min-width: 600px){
-.questions{
-  float:right;
-  font-size: 1em;
-  font-weight: 800;
-  margin-left: 70px;
-  font-family: 'Montserrat', sans-serif;
-  width: 50%
-    
-}
-
-
-}
-
-@media only screen and (max-width: 600px){
-.buttonContainer
-{
-  width: 40%;
-}
-main 
-{
-    width: 250px;
-    font-size: medium;
-    padding: 0px;
-    margin: 0px;
-}
-h3
-{  
-  width: 250px; 
-}
-
+section:nth-child(even) {
+  background-color: #ddd;
 }
