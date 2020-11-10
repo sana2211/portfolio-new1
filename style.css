@@ -1,42 +1,303 @@
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/*---CSS Core Style  ---*/ 
 
-body {
-  font-family: "Open Sans",
-  sans-serif; 
-  font-size: 20px;
-  color: #444;
-  text-align: center;
+body{
+  font-family: Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding:0;
   line-height: 1.5;
+  color: rgb(61, 58, 58);
+  background-color:#ffe8dc;
+  height: auto;
+  text-align: center; 
+
 }
 
-nav,
-footer {
-  padding: 1% 0;
-  background-color: #aaa;
+h1, h2 , h3 {
+  padding: 10px 0;
+  margin:0
+}
+h3 {
+  font-size: 43 px;
+  font-weight: inherit;
+  margin-left: -2 rem;
+  margin-bottom: 2 rem;
+  line-height: 1.2;
+}
+p{
+  margin: 0;
+  padding: 10px 0;
+}
+section{
+  padding: 0 10px;
+  text-align: center;
+  
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-
-
+/*---Header h1 & Navigation---*/
 
 header {
-  padding: 12% 0;
+color: #f3f3f3;
+background-color: #ffffff;
+margin:0;
+padding:0;
 }
 
-section {
-  min-height: 200px;
-  padding: 6% 0;
-  background-color: #bbb;
+header h1{
+  text-align: center;
+  color: rgb(83, 80, 80);
+  font-weight: 400;
 }
 
-section:nth-child(even) {
-  background-color: #ddd;
+header nav ul{
+display: flex;
+justify-content: right;
+list-style-type: none;
+
+}
+
+header nav ul li a{
+  text-decoration: none;
+  color: rgb(83, 80, 80);
+  transition: all 0.5s;
+  margin-right: 10px;
+  font-size: 15px;
+}
+header a:hover{
+  color:rgb(43, 40, 40);
+  font-weight: bold;
+}
+
+/*--Introduction--*/
+
+
+li{
+  list-style: none;
+}
+section{
+  padding-bottom: 10px;
+}
+
+/*---About Me---*/
+
+.item li{
+  font-size: 20px;
+  list-style-type: none;
+  text-align: left;
+}
+
+.aboutMe h2{
+  font-size: 25px;
+  text-align: center;
+}
+
+right
+{
+  width: 50%;
+  margin: 5px;
+}
+
+/*Portfolio*/
+section h2{
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+section p{
+  font-size: 15px;
+  text-align: center;
+  
+}
+.flex-container:hover{
+  box-shadow: -1px 3px 10px 0;
+}
+.flex-container{
+  margin: 0px auto;
+  width: 60%;
+  text-align: center;
+  
+}
+.flex-container h3{
+font-size: 20px;
+color: rgb(167, 161, 161);
+flex-direction: column;
+}
+.flex-container p{
+  font-size:15px;
+}
+.icon{
+  padding:5px;
+  color:rgb(19, 19, 54)
+}
+.text ul li a{
+text-decoration: none;
+font-size: 15px;
+font-weight: bold;
+color: rgb(11, 7, 207)
+}
+.text ul li{
+  justify-content: center;
+  text-align: center;
+  margin-top: 0;
+}
+.text a:link{color: rgb(97, 96, 96);}
+.text a:visited{color: darkblue;}
+.text a:hover{color: grey;}
+.text a:active{color:black}
+
+.skills li{
+  list-style: square;
+  list-style-position: inside;
+  text-align: center;  
+  }
+ 
+/*Background color change to section*/
+
+section.portfolio{
+  background-color:#ffffff;
+ 
+}
+/*Groups & Items-Mobile First*/
+.group{
+  display: flex;
+  flex-direction: column;
+  margin:0px auto;
+  width: 80%;
+  }
+
+right, ul{
+       width: 100%;
+     }
+     #skillslist
+     {
+       width: 80%;
+     }
+
+@media screen and (min-width:768px){
+  .group {
+    flex-direction:row;
+    width: 100%;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+    }
+     #skillslist
+     {
+       width: 100%;
+     }
+    .flex-container{
+      height: 200px;
+      margin:10px;
+    }
+    contact ol{
+      margin: 0px auto;
+    }
+    .contact{
+      flex-direction: row;
+      }
+      
+    .msg textarea{
+       height:80px;
+     }
+    .input-fields, msg{
+       width: 100%;
+     }
+     
+    }
+  
+    
+/*---Contact---*/
+.contact {
+  padding: 20px;
+  justify-content: center;
+}
+.contact h3{
+  font-size: 25px;
+  font-weight: 400;
+  padding: 5px;
+  text-align: center;
+}
+
+.contact ol li a{
+  text-decoration: none;
+}
+/*---Contact Links---*/
+
+.contact ol a{
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.contact ol li{
+  list-style : none;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.contact a:link{color: rgb(97, 96, 96);}
+.contact a:visited{color: darkblue;}
+.contact a:hover{color: grey;}
+.contact a:active{color:black}
+
+/*--Contact Form--*/
+
+.contact-form{
+  max-width: 550px;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgb(190, 208, 214);
+    
+}
+form label{
+  display: block;
+}
+.input-fields, .msg{
+  width:100%;
+}
+form input{
+  padding-bottom: 10px;
+  width: 100%;
+}
+form{
+  width:100%;
+}
+label{
+  margin-top: 10px;
+}
+form input, .msg textarea{
+  width: 100%;
+  background: transparent;
+  border:0;
+  border-bottom: 1px solid rgb(43, 40, 40);
+  color:rgb(43, 41, 41)
+  }
+.msg textarea{
+  height: 200px;
+}
+.btn{
+  background-color: #ffe8dc;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+
+}
+
+/*--- Horizontal Line---*/
+
+hr{
+  margin: 10px;
+}
+
+/*---Footer---*/
+
+footer{
+  text-align: center;
+  min-height: 70px;
+  font-size: 12px;
 }
