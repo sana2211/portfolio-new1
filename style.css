@@ -81,7 +81,7 @@ section{
 
 /*---About Me---*/
 
-.item li{
+.item ul{
   font-size: 20px;
   list-style-type: none;
   text-align: left;
