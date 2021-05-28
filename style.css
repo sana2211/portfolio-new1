@@ -131,6 +131,10 @@ section p{
   text-align: center;
   
 }
+.appPic{
+height: 50%;
+  width: 20%;
+}
 .flex-container:hover{
   box-shadow: -1px 3px 10px 0;
 }
