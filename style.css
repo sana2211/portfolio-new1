@@ -94,6 +94,8 @@ li{
 }
 section{
   padding-bottom: 10px;
+  padding: 0 50px;
+  text-align: center;
 }
 
 /*---About Me---*/
