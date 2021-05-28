@@ -133,7 +133,6 @@ section p{
 }
 .flex-container{
   margin: 0px auto;
-  width: 60%;
   text-align: center;
   
 }
@@ -164,6 +163,7 @@ color: rgb(11, 7, 207)
   justify-content: center;
   text-align: center;
   margin-top: 0;
+  padding: 0 60%;
 }
 .text a:link{color: rgb(97, 96, 96);}
 .text a:visited{color: darkblue;}
