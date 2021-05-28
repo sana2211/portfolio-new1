@@ -205,7 +205,9 @@ section.portfolio{
   max-width: 100%;
     overflow-x: hidden;
   }
-
+ header nav ul li a {
+    font-size: 11px;
+}
 section{
   padding: 0 10px;
   text-align: center;
@@ -230,10 +232,7 @@ section{
      {
        width: 100%;
      }
-  header nav ul li a {
-    font-size: 11px;
-}
-    .flex-container{
+  .flex-container{
       height: auto;
       margin:4px;
     }
