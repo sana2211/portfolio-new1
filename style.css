@@ -135,6 +135,11 @@ section p{
   text-align: center;
   
 }
+section{
+  padding: 0 80px;
+  text-align: center;
+  
+}
 .flex-container h3{
 font-size: 20px;
 color:black ;
@@ -187,7 +192,6 @@ section{
   text-align: center;
   
 }
-
 right, ul{
        width: 100%;
      }
