@@ -129,8 +129,15 @@ section h2{
 section p{
   font-size: 15px;
   text-align: center;
-  
 }
+
+.group1{
+  display: row;
+  margin:0px auto;
+  width: 80%;
+  max-width: 100%;
+    overflow-x: hidden;
+  }
 .appPic {
       max-width: 100%;
     height: auto;
@@ -138,9 +145,10 @@ section p{
 .flex-container:hover{
   box-shadow: -1px 3px 10px 0;
 }
-.flex-container{
+.flex-container1{
   margin: 0px auto;
   text-align: center;
+  display: column;
   
 }
 section{
