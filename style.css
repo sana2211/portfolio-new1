@@ -33,7 +33,7 @@ p{
   text-align:center;
 }
 section{
-  padding: 0 10px;
+  padding: 0 50px;
   text-align: center;
   
 }
@@ -182,6 +182,11 @@ section.portfolio{
   margin:0px auto;
   width: 80%;
   }
+section{
+  padding: 0 10px;
+  text-align: center;
+  
+}
 
 right, ul{
        width: 100%;
@@ -222,7 +227,11 @@ right, ul{
      }
      
     }
+  section{
+  padding: 0 10px;
+  text-align: center;
   
+}
     
 /*---Contact---*/
 .contact {
