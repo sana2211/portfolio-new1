@@ -192,7 +192,6 @@ section.portfolio{
 /*Groups & Items-Mobile First*/
 .group{
   display: flex;
-  flex-direction: column;
   margin:0px auto;
   width: 80%;
   max-width: 100%;
