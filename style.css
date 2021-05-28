@@ -75,6 +75,13 @@ header a:hover{
 div{
   display: block;
 }
+#bio div.bio-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
 
 #bio div div.right-bio{
 text-align:justify;
