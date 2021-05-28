@@ -72,8 +72,15 @@ header a:hover{
 }
 
 /*--Introduction--*/
+div{
+  display: block;
+}
 
-
+#bio div div.right-bio{
+text-align:justify;
+  width: 40%;
+  min-width: 300px;
+}
 li{
   list-style: none;
 }
