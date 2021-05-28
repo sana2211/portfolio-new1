@@ -151,7 +151,7 @@ section{
 .flex-container h3{
 font-size: 20px;
 color:black ;
-flex-direction: column;
+flex-direction: row;
 }
 .flex-container p{
   font-size:15px;
