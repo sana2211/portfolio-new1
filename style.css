@@ -29,6 +29,7 @@ p{
   margin: 0;
   padding: 10px 0;
   flex-direction: row;
+  width: 70%
 }
 section{
   padding: 0 10px;
